@@ -1,0 +1,7 @@
+.idea
+
+node_modules
+src
+package.json
+package-lock.json
+webpack.config.js

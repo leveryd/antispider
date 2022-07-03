@@ -1,0 +1,4 @@
+inithtml.lua：嵌入body_filter_by_lua_file阶段，在html页面插入js脚本
+
+access.lua：嵌入access_by_lua_file阶段，对kstoken解密并根据字段值验证是否是爬虫，是爬虫就返回403
+

@@ -1,0 +1,38 @@
+<head>
+<script src="./js/axios.min.js"></script>
+</head>
+
+<script>
+    // axios示例 参考 http://axios-js.com/zh-cn/docs/index.html
+    function testGET(){
+        // 为给定 ID 的 user 创建请求
+        axios.get('/api/user?ID=12345')
+            .then(function (response) {
+                console.log(response);
+                document.getElementById("response").innerHTML = JSON.stringify(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
+    function testPOST(){
+        axios.post('/api/user', {
+            firstName: 'Fred',
+            lastName: 'Flintstone'
+        })
+            .then(function (response) {
+                document.getElementById("response").innerHTML = JSON.stringify(response.data);
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+</script>
+
+<button onclick="testGET()">send GET request</button>
+
+<button onclick="testPOST()">send POST request</button>
+
+<div id="response"></div>
